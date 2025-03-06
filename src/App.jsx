@@ -1,13 +1,15 @@
 import './App.css'
 import {Route, Routes} from "react-router-dom";
-import Home from "./pages/Home.jsx";
-import NewPost from "./pages/NewPost.jsx";
-import PostOverview from "./pages/PostOverview.jsx";
-import Error404 from "./pages/Error404.jsx";
+import Home from "./pages/home/Home.jsx";
+import NewPost from "./pages/newpost/NewPost.jsx";
+import PostOverview from "./pages/postoverview/PostOverview.jsx";
+import Error404 from "./pages/error404/Error404.jsx";
+import Navigation from "./components/navigation/Navigation.jsx";
 
 function App() {
     return (
         <div className="page-container">
+            <Navigation/>
             <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/overzicht" element ={<PostOverview/>}/>
