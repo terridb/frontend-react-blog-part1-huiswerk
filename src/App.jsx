@@ -5,6 +5,7 @@ import NewPost from "./pages/newpost/NewPost.jsx";
 import PostOverview from "./pages/postoverview/PostOverview.jsx";
 import Error404 from "./pages/error404/Error404.jsx";
 import Navigation from "./components/navigation/Navigation.jsx";
+import Blogpost from "./pages/blogpost/Blogpost.jsx";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                 <Route path="/overzicht" element ={<PostOverview/>}/>
                 <Route path="/nieuwe-post" element={<NewPost/>}/>
                 <Route path="/error-404" element={<Error404/>}/>
+                <Route path="/blogpost/:id" element={<Blogpost/>}/>
             </Routes>
         </div>
     )
