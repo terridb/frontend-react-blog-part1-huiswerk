@@ -1,8 +1,11 @@
+body {
+    background-color: #e6e7eb;
+}
+
 .page-container {
     width: 100%;
     height: 100vh;
     color: #2d2f39;
-    background-color: #e6e7eb;
     display: flex;
     flex-direction: column;
     align-items: center;

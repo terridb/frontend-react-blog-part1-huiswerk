@@ -11,13 +11,15 @@ function App() {
     return (
         <div className="page-container">
             <Navigation/>
-            <Routes>
-                <Route path="/" element={<Home/>} />
-                <Route path="/overzicht" element ={<PostOverview/>}/>
-                <Route path="/nieuwe-post" element={<NewPost/>}/>
-                <Route path="/error-404" element={<Error404/>}/>
-                <Route path="/blogpost/:id" element={<Blogpost/>}/>
-            </Routes>
+            <main>
+                <Routes>
+                    <Route path="/" element={<Home/>}/>
+                    <Route path="/overzicht" element={<PostOverview/>}/>
+                    <Route path="/nieuwe-post" element={<NewPost/>}/>
+                    <Route path="/error-404" element={<Error404/>}/>
+                    <Route path="/blogpost/:id" element={<Blogpost/>}/>
+                </Routes>
+            </main>
         </div>
     )
 }

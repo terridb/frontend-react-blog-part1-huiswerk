@@ -6,16 +6,16 @@
         3.1 Reusables
         3.2 Other
     4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
     5. Media Queries
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
 
 /* ------------------------------- 2. Typography ----------------------------------- */
-a {
-    font-weight: bold;
-    font-size: 14px;
-}
+
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
@@ -23,40 +23,26 @@ a {
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
-
-nav {
-    background-color: #2d2f39;
+.post-overview-introduction {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    flex-basis: 70px;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 0 20px;
-    flex-shrink: 0;
 }
 
-ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
+.post-preview {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 11px 14px -6px rgba(152,152,152,0.41)
 }
 
-.default-menu-link {
-    color: #FFF;
+.preview-link {
+    color: #2d2f39;
     text-decoration: none;
 }
+/* --------------- 4.1 Header ------------------------- */
 
-.active-menu-link {
-    color: #74e498;
-    text-decoration-line: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-}
-
-.nav-logo{
-    height: 30px;
-}
+/* --------------- 4.2 Introduction ------------------- */
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
