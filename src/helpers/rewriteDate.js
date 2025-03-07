@@ -6,3 +6,7 @@ export function rewriteDate(data) {
         day: "numeric",
     });
 }
+
+export function writeDateToday() {
+    return new Date().toISOString();
+}
