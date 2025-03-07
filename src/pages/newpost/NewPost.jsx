@@ -2,9 +2,11 @@ import {useForm} from "react-hook-form";
 import "./NewPost.css"
 import {writeDateToday} from "../../helpers/rewriteDate.js";
 import {calculateReadingTime} from "../../helpers/readingTime.js";
+import {useNavigate} from "react-router-dom";
 
 function NewPost() {
     const {handleSubmit, formState: {errors}, register} = useForm();
+    const navigate = useNavigate();
 
     function handleFormSubmit(e) {
         e.created = writeDateToday();
@@ -12,6 +14,7 @@ function NewPost() {
         e.shares = 0;
         e.readtime = calculateReadingTime(e.post);
         console.log(e);
+        navigate("/overzicht")
     }
 
     return (
