@@ -3,7 +3,6 @@ import "./PostOverview.css"
 import {Link} from "react-router-dom";
 
 function PostOverview() {
-    console.log(posts)
     return (
         <>
             <div className="post-overview-introduction">
@@ -14,7 +13,7 @@ function PostOverview() {
                 {posts.map(post => (
                     <div key={post.id} className="post-preview">
                         <p>
-                            <Link className="preview-link" to={`/blogpost/${post.title}`}>{post.title} </Link>
+                            <Link className="preview-link" to={`/blogpost/${post.id}`}>{post.title} </Link>
                             ({post.author})
                         </p>
                         <p>{post.comments} reacties - {post.shares} keer gedeeld</p>
