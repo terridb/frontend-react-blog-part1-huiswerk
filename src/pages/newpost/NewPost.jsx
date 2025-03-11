@@ -3,6 +3,7 @@ import "./NewPost.css"
 import {writeDateToday} from "../../helpers/rewriteDate.js";
 import {calculateReadingTime} from "../../helpers/readingTime.js";
 import {useNavigate} from "react-router-dom";
+import TextInput from "../../components/textInput/TextInput.jsx";
 
 function NewPost() {
     const {handleSubmit, formState: {errors}, register} = useForm();
@@ -12,73 +13,48 @@ function NewPost() {
         e.created = writeDateToday();
         e.comments = 0;
         e.shares = 0;
-        e.readtime = calculateReadingTime(e.post);
+        e.readtime = calculateReadingTime(e.content);
         console.log(e);
         navigate("/overzicht")
     }
 
     return (
         <form className="new-post-form" onSubmit={handleSubmit(handleFormSubmit)}>
-            <h1>Maak een nieuwe post</h1>
-            <label htmlFor="title" className="form-label">
-                Titel
-            </label>
-            <input
+            <h1>Post toevoegen</h1>
+            <TextInput
                 type="text"
-                {...register("title", {
-                    required: {
-                        value: true,
-                        message: "Dit veld is verplicht",
-                    }
-                })}
+                name="Titel"
+                id="title"
+                isRequired={true}
+                register={register}
+                errors={errors}
             />
-            {errors.title && <p>{errors.title.message}</p>}
-            <label htmlFor="subtitle" className="form-label">
-                Subtitel
-            </label>
-            <input
+            <TextInput
                 type="text"
-                {...register("subtitle", {
-                    required: {
-                        value: true,
-                        message: "Dit veld is verplicht",
-                    }
-                })}
+                name="Subtitel"
+                id="subtitle"
+                isRequired={true}
+                register={register}
+                errors={errors}
             />
-            {errors.subtitle && <p>{errors.subtitle.message}</p>}
-            <label htmlFor="author" className="form-label">
-                Auteur
-            </label>
-            <input
+            <TextInput
                 type="text"
-                {...register("author", {
-                    required: {
-                        value: true,
-                        message: "Dit veld is verplicht",
-                    }
-                })}
+                name="Auteur"
+                id="author"
+                isRequired={true}
+                register={register}
+                errors={errors}
             />
-            {errors.author && <p>{errors.author.message}</p>}
-            <label htmlFor="post" className="form-label">
-                Bericht
-            </label>
-            <textarea
-                {...register("post", {
-                    required: {
-                        value: true,
-                        message: "Dit veld is verplicht",
-                    },
-                    minLength: {
-                        value: 300,
-                        message: "Dit veld moet minstens 300 karakters bevatten",
-                    },
-                    maxLength: {
-                        value: 2000,
-                        message: "Dit veld mag maximaal 2000 karakters bevatten",
-                    },
-                })}
+            <TextInput
+                type="textarea"
+                name="Bericht"
+                id="content"
+                isRequired={true}
+                register={register}
+                errors={errors}
+                minLength={300}
+                maxLength={2000}
             />
-            {errors.post && <p>{errors.post.message}</p>}
             <button className="post-button" type="submit">Verzenden</button>
         </form>
     );

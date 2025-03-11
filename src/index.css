@@ -5,6 +5,7 @@
   --color-secondary: #2C2F39;
   --color-tertiary: #50535C;
   --color-white: #FFFFFF;
+  --color-background: #e6e7eb;
 }
 
 * {
@@ -22,6 +23,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  background-color: var(--color-background);
 }
 
 button, input, select, textarea {
@@ -32,12 +34,7 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
   margin-block: 0.67em;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  margin-block: 0.67em;
+  text-align: center;
 }
 
 h2 {
@@ -54,4 +51,21 @@ h4 {
 
 p {
   margin-block: 0.5em;
+}
+
+.page-container {
+  color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.outer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  width: calc(100% - 40px);
+  margin: 20px auto;
 }

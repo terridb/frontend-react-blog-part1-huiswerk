@@ -23,30 +23,32 @@
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
-.blogpost-content {
-    background-color: var(--color-white);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 800px;
-    flex-shrink: 1;
-    flex-grow: 0;
-    padding: 20px 50px;
-    box-shadow: 0 11px 14px -6px rgba(152,152,152,0.41);
-    gap: 10px;
-}
-
-a {
+.preview-link {
+    color: var(--color-primary);
     text-decoration: none;
-    color: var(--color-primary);
 }
 
-.return-link {
-    color: var(--color-primary);
+.post-preview {
+    background-color: var(--color-white);
+    padding: 20px;
+    margin: 20px 10px;
+    border-radius: 5px;
+    box-shadow: 0 11px 14px -6px rgba(152,152,152,0.41)
+}
+
+.post-preview-title{
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 15px;
+    color: var(--color-tertiary);
 }
 
+.post-preview-title p,
+.post-preview-title a {
+    font-size: 1rem;
+}
+.post-preview-details {
+    font-size: 0.875rem;
+    color: var(--color-tertiary);
+}
 /* ------------------------------- 5. Media Queries -------------------------------- */

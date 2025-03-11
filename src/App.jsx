@@ -12,13 +12,15 @@ function App() {
         <div className="page-container">
             <Navigation/>
             <main>
-                <Routes>
-                    <Route path="/" element={<Home/>}/>
-                    <Route path="/overzicht" element={<PostOverview/>}/>
-                    <Route path="/nieuwe-post" element={<NewPost/>}/>
-                    <Route path="/error-404" element={<Error404/>}/>
-                    <Route path="/blogpost/:id" element={<Blogpost/>}/>
-                </Routes>
+                <section className="outer-container">
+                    <Routes>
+                        <Route path="/" element={<Home/>}/>
+                        <Route path="/overzicht" element={<PostOverview/>}/>
+                        <Route path="/nieuwe-post" element={<NewPost/>}/>
+                        <Route path="/error-404" element={<Error404/>}/>
+                        <Route path="/blogpost/:id" element={<Blogpost/>}/>
+                    </Routes>
+                </section>
             </main>
         </div>
     )

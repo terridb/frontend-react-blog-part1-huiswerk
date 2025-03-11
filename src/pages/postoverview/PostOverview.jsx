@@ -1,25 +1,18 @@
 import posts from "../../constants/data.json"
-import "./PostOverview.css"
-import {Link} from "react-router-dom";
+import PostPreview from "../../components/postPreview/PostPreview.jsx";
 
 function PostOverview() {
     return (
         <>
-            <div className="post-overview-introduction">
-                <h1>Alle posts</h1>
-                <h3>{posts.length} posts</h3>
-            </div>
-            <section>
+            <h1>Bekijk alle {posts.length} posts op het platform</h1>
+            <div className="post-preview-container">
                 {posts.map(post => (
-                    <div key={post.id} className="post-preview">
-                        <p>
-                            <Link className="preview-link" to={`/blogpost/${post.id}`}>{post.title} </Link>
-                            ({post.author})
-                        </p>
-                        <p>{post.comments} reacties - {post.shares} keer gedeeld</p>
-                    </div>
+                    <PostPreview
+                        key={post.id}
+                        post={post}
+                    />
                 ))}
-            </section>
+            </div>
         </>
     );
 }

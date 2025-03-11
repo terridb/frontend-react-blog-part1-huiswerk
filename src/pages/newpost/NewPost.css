@@ -26,32 +26,18 @@
 .new-post-form {
     display: flex;
     flex-direction: column;
-}
-
-.form-label {
-    display: block;
-    font-weight: bold;
-    margin: 15px 0 0 0;
-}
-
-input,
-textarea {
-    outline: none;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    color: #2d2f39;
+    width: 100%;
 }
 
 .post-button {
-    background-color: #74e498;
+    background-color: var(--color-primary);
     border: none;
     padding: 20px 80px;
     margin: 40px 0;
     cursor: pointer;
     border-radius: 40px;
     font-weight: bold;
-    color: #FFF;
+    color: var(--color-white);
     align-self: center;
 }
 
