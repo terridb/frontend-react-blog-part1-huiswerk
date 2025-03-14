@@ -13,7 +13,7 @@ function PostOverview() {
             const response = await axios.get("http://localhost:3000/posts");
             setPosts(response.data);
         } catch (err) {
-            setError(err);
+            setError(err.message || "Er is iets fout gegaan!");
             console.error(error);
         } finally {
             setLoading(false);
