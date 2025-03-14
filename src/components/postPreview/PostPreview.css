@@ -23,11 +23,6 @@
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
-.preview-link {
-    color: var(--color-primary);
-    text-decoration: none;
-}
-
 .post-preview {
     background-color: var(--color-white);
     padding: 20px;

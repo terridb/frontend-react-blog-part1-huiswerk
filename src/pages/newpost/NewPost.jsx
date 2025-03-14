@@ -46,7 +46,7 @@ function NewPost() {
                 id ? (
                     <p>
                         De blogpost is succesvol toegevoegd. Je kunt deze hier bekijken:
-                        <Link to={`/posts/${id}`}> Link naar post.</Link>
+                        <Link to={`/blogpost/${id}`}> Link naar post.</Link>
                     </p>
                 ) : (
                     <form className="new-post-form" onSubmit={handleSubmit(handleFormSubmit)}>
@@ -87,7 +87,7 @@ function NewPost() {
                             minLength={300}
                             maxLength={2000}
                         />
-                        <button className="post-button" type="submit">Verzenden</button>
+                        <button className="general-button" type="submit">Verzenden</button>
                     </form>
                 )
             }

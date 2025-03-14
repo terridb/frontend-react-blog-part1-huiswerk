@@ -1,5 +1,18 @@
-/*In dit bestand plaats je alle algemene styling die geldt voor de gehele applicatie*/
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
 
+/* ------------------------------- 1. Global Styles -------------------------------- */
 :root {
   --color-primary: #38E991;
   --color-secondary: #2C2F39;
@@ -25,7 +38,7 @@ body {
   -webkit-text-size-adjust: 100%;
   background-color: var(--color-background);
 }
-
+/* ------------------------------- 2. Typography ----------------------------------- */
 button, input, select, textarea {
   font-family: inherit;
 }
@@ -51,6 +64,17 @@ h4 {
 
 p {
   margin-block: 0.5em;
+}
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
 }
 
 .page-container {
@@ -93,3 +117,19 @@ p {
 .error-message {
   color: #cb3c3c;
 }
+
+.general-button {
+  background-color: var(--color-primary);
+  border: none;
+  padding: 20px 60px;
+  margin: 40px 0;
+  cursor: pointer;
+  border-radius: 40px;
+  font-weight: bold;
+  color: var(--color-white);
+  align-self: center;
+}
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+

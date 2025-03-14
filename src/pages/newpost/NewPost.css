@@ -29,16 +29,4 @@
     width: 100%;
 }
 
-.post-button {
-    background-color: var(--color-primary);
-    border: none;
-    padding: 20px 80px;
-    margin: 40px 0;
-    cursor: pointer;
-    border-radius: 40px;
-    font-weight: bold;
-    color: var(--color-white);
-    align-self: center;
-}
-
 /* ------------------------------- 5. Media Queries -------------------------------- */

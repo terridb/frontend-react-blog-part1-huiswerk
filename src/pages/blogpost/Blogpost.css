@@ -37,16 +37,16 @@
     gap: 10px;
 }
 
-a {
-    text-decoration: none;
-    color: var(--color-primary);
-}
-
 .return-link {
     color: var(--color-primary);
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
