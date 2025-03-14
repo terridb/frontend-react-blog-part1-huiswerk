@@ -14,7 +14,7 @@ function PostOverview() {
             setPosts(response.data);
         } catch (err) {
             setError(err.message || "Er is iets fout gegaan!");
-            console.error(error);
+            console.error(err);
         } finally {
             setLoading(false);
         }

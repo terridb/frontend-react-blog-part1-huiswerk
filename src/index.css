@@ -89,3 +89,7 @@ p {
     transform: rotate(360deg);
   }
 }
+
+.error-message {
+  color: #cb3c3c;
+}
